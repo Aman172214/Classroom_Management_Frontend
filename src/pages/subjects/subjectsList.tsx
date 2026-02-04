@@ -34,14 +34,14 @@ const SubjectsList = () => {
         ];
 
   const searchFilters = searchQuery
-    ? []
-    : [
+    ? [
         {
           field: "name",
           operator: "contains" as const,
           value: searchQuery,
         },
-      ];
+      ]
+    : [];
 
   const subjectTable = useTable<Subject>({
     columns: useMemo<ColumnDef<Subject>[]>(
