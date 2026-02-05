@@ -65,7 +65,7 @@ const SubjectsList = () => {
         },
         {
           id: "department",
-          accessorKey: "department",
+          accessorKey: "department.name",
           size: 200,
           header: () => <p className="column-title">Department</p>,
           cell: ({ getValue }) => (
@@ -109,7 +109,7 @@ const SubjectsList = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <div className="flex gap-2 w-ful sm:w-auto">
+          <div className="flex gap-2 w-full sm:w-auto">
             <Select
               value={selectedDepartment}
               onValueChange={setSelectedDepartment}
